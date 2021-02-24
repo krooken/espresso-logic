@@ -66,6 +66,7 @@ void fprint_pla(FILE *fp, pPLA PLA, int output_type)
 	    fprintf(fp, ".end\n");
 	}
     }
+	fflush(fp);
 }
 
 void fpr_header(FILE *fp, pPLA PLA, int output_type)
