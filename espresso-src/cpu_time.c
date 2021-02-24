@@ -31,12 +31,12 @@
 
 /* default */
 #if !defined(BSD) && !defined(UNIX10) && !defined(UNIX60) && !defined(UNIX100)
-#define BSD
+//#define BSD
 #endif
 
 #ifdef BSD
-#include <sys/time.h>
-#include <sys/resource.h>
+#include <time.h>
+#include <resource.h>
 #endif
 
 #ifdef UNIX10

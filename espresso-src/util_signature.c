@@ -20,16 +20,14 @@
 #include <math.h>
 #include "espresso.h"
 #include "signature.h"
-#include <sys/time.h>
-#include <sys/resource.h>
-#include <unistd.h>
+#include "unistd.h"
+#include <time.h>
+//#include <sys/resource.h>
 
 void
 set_time_limit(int seconds)
 {
-	struct rlimit rlp_st, *rlp = &rlp_st;
-	rlp->rlim_cur = seconds;
-	setrlimit(RLIMIT_CPU, rlp);
+	
 }
 
 void

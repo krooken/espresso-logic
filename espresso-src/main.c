@@ -15,7 +15,7 @@
 
 #include "espresso.h"
 #include "main.h"		/* table definitions for options */
-#include <unistd.h>
+#include "unistd.h"
 
 static FILE *last_fp;
 static int input_type = FD_type;
@@ -530,6 +530,8 @@ int main(int argc, char **argv)
     setdown_cube();             /* free the cube/cdata structure data */
     sf_cleanup();               /* free unused set structures */
     sm_cleanup();               /* sparse matrix cleanup */
+
+	fflush(stdout);
 
     exit(0);
     return 0;
